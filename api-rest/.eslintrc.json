@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "amd": true,
+    "commonjs": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": ["prettier", "eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "prettier/prettier": "warn"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ]
+}
