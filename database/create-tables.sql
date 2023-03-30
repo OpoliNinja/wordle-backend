@@ -16,6 +16,7 @@ CREATE TABLE games (
     id serial PRIMARY KEY,
     word int NOT NULL,
     player varchar(23) NOT NULL,
+    won bool DEFAULT false,
     FOREIGN KEY (word) REFERENCES words(id),
     FOREIGN KEY (player) REFERENCES players(id)
 );
