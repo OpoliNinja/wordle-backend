@@ -1,8 +1,10 @@
 import { Sequelize } from "sequelize"
+import { config } from "dotenv"
 import gameModel from "./models/game.model"
 import playerModel from "./models/player.model"
 import tryModel from "./models/try.model"
 import wordModel from "./models/word.model"
+config()
 
 const db = () => {
 	const sequelize = new Sequelize(
@@ -37,6 +39,7 @@ const db = () => {
 		word,
 		player,
 		auth: async () => sequelize.authenticate(),
+		sequelize,
 	}
 }
 
