@@ -1,6 +1,7 @@
 import {config} from "dotenv"
 import express, {Express, Request, Response, NextFunction} from "express"
 import helmet from "helmet"
+import router from "../routes"
 
 // Initializations
 config()
@@ -14,7 +15,7 @@ app.use(helmet());
 app.use(express.json());
 
 // Routes
-// TODO
+app.use(router)
 
 // Error Handler
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
