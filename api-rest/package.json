@@ -11,8 +11,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.1",
+    "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
-    "pq": "^0.0.3",
     "sequelize": "^6.30.0"
   },
   "repository": "https://github.com/OpoliNinja/wordle-backend/api-rest",
