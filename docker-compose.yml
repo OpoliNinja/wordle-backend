@@ -1,0 +1,22 @@
+version: "3.9"
+
+networks:
+  wordle-network:
+    name: wordle-network
+
+services:
+  wordle-sql:
+    image: "postgres:15.2-alpine"
+    networks:
+      - wordle-network
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "OpoliNinja"
+      POSTGRES_PASSWORD: "Secret123"
+      POSTGRES_DB: "wordle"
+    volumes:
+      - ./database/wordle-sql-volume:/var/lib/postgresql/data
+      - ./database/words.txt:/var/lib/postgresql/words.txt
+      - ./database/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
+      - ./database/insert-data.sh:/docker-entrypoint-initdb.d/insert-data.sh
