@@ -5,8 +5,6 @@ set -e
 # 1) Filter words with 5 letters
 fiveLettersWords=$(grep '^.....$' /var/lib/postgresql/words.txt)
 
-echo "$fiveLettersWords"
-
 # 2) Start creating the query
 query="INSERT INTO words (word) VALUES "
 
