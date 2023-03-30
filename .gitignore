@@ -1,2 +1,5 @@
+*/yarn-error.log
+*/node_modules
+
 # VOLUMES
 database/wordle-sql-volume
