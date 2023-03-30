@@ -1,7 +1,7 @@
 import { config } from "dotenv"
 import express, { Express, Request, Response, NextFunction } from "express"
 import helmet from "helmet"
-import router from "../routes"
+import router from "./routes"
 
 // Initializations
 config()
