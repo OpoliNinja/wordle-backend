@@ -12,6 +12,9 @@ const db = () => {
 		{
 			dialect: "postgres",
 			host: process.env.DB_HOST,
+			define: {
+				timestamps: false,
+			},
 		},
 	)
 
@@ -21,12 +24,12 @@ const db = () => {
 	const word = wordModel(sequelize)
 
 	// Relations
-	attempt.belongsTo(game)
-	game.hasMany(attempt)
-	game.belongsTo(word)
-	game.belongsTo(player)
-	word.hasMany(game)
-	player.hasMany(game)
+	attempt.belongsTo(game, { foreignKey: "game" })
+	game.hasMany(attempt, { foreignKey: "game" })
+	game.belongsTo(word, { foreignKey: "word" })
+	game.belongsTo(player, { foreignKey: "player" })
+	word.hasMany(game, { foreignKey: "word" })
+	player.hasMany(game, { foreignKey: "player" })
 
 	return {
 		attempt,
