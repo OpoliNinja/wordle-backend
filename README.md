@@ -16,6 +16,7 @@ I hope you get satisfied with my solution(s).
 - [Solutions](#solutions)
   - [Api Rest](#api-rest)
   - [GRPC](#grpc)
+  - [TRPC](#trpc)
   - [WebSocket](#websocket)
   - [Socket.io](#socketio)
 
@@ -49,6 +50,9 @@ This project is ready for serve into a server, the steps you need to follow are 
    4. ```yarn serve```
 
 ### GRPC
+🏗 Work in progress 🏗
+
+### TRPC
 🏗 Work in progress 🏗
 
 ### WebSocket
