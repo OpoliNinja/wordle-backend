@@ -27,9 +27,24 @@ class PlayerController {
 				},
 			})
 
+			const wins = await db.game.count({
+				where: {
+					player: player[0].dataValues["id"],
+					won: true,
+				},
+			})
+
+			const totalGames = await db.game.count({
+				where: {
+					player: player[0].dataValues["id"],
+				},
+			})
+
 			res.status(player[1] ? 201 : 200).json({
 				...player[0].dataValues,
 				isNew: player[1],
+				wins,
+				totalGames,
 			})
 		} catch (err) {
 			next(err)
