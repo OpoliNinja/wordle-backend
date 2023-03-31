@@ -38,16 +38,37 @@ This will deploy the database on port **:5342**
 ### Api Rest
 For this solution I use express as node.js framework. In order to run this server in development environment follow this steps:
 
-1. ```cd api-rest```
-2. ```yarn install```
-3. ```yarn dev```
+1.
+```
+cd api-rest
+```
+2.
+```
+yarn install
+```
+3.
+```
+yarn dev
+```
 
 This project is ready for serve into a server, the steps you need to follow are the next ones:
 1. It is necessary to create an env file, see the example in /api-rest/.env.example, if you want to use the default database you can run this command:
-   1. ```cd api-rest```
-   2. ```echo "PORT=5000\nDB_USER=\"OpoliNinja\"\nDB_PASS=\"Secret123\"\nDB_NAME=\"wordle\"\nDB_HOST=\"localhost\"" > .env```
-   3. ```yarn build```
-   4. ```yarn serve```
+
+```
+cd api-rest
+```
+
+```
+echo "PORT=5000\nDB_USER=\"OpoliNinja\"\nDB_PASS=\"Secret123\"\nDB_NAME=\"wordle\"\nDB_HOST=\"localhost\"" > .env
+```
+2. Then you can build and serve this service
+```
+yarn build
+```
+
+```
+yarn serve
+```
 
 ### GRPC
 🏗 Work in progress 🏗
