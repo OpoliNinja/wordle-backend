@@ -4,6 +4,8 @@
   "description": "Wordle Api Rest",
   "main": "index.js",
   "scripts": {
+    "serve": "node dist/src/index.js",
+    "build": "tsc",
     "start": "ts-node ./src/index.ts",
     "dev": "nodemon"
   },
